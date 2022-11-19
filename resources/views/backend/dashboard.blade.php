@@ -1,6 +1,6 @@
 @extends('backend.main');
 
-
+@section('title', 'WebAiid | Dashboard');
 
 @section('content')
 

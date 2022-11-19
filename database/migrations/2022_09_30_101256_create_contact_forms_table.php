@@ -17,7 +17,7 @@ class CreateContactFormsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->string('website');
+            $table->string('website')->nullable();
             $table->text('message');
             $table->timestamps();
         });

@@ -1,31 +1,17 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    @livewire('newsletter')
 
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="">
-              <span>FlexStart</span>
+            <a href="{{route('home-page')}}" class="logo d-flex align-items-center">
+              <img src="{{asset('assets/img/webaiidlogo.png')}}" alt="web design shopify agency">
+          
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>We started developing with Shopify in the very early days and have since helped hundreds of brands succeed on the platform Our mission is to help eCommerce businesses grow through innovation, consistency and quality of delivered Shopify solutions and services</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -37,33 +23,32 @@
           <div class="col-lg-2 col-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{route('home-page')}}">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{route('blog-page')}}">Blog</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{route('contact-page')}}">Services</a></li>
+              
             </ul>
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a>Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a>Shopify Developemt</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a>Theme Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a>Shopify SEO & Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a>Custom Web App</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Boro Dewra, Mondol Market, Tongi <br>
+              Dhaka, Bangladesh <br>
+              <br>
+              <strong>Phone:</strong> +880 1626537643<br>
+              <strong>Email:</strong> info@webaiid.com<br>
             </p>
 
           </div>
@@ -83,6 +68,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="{{asset('assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
   <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -92,6 +78,26 @@
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  
 
+
+<script>
+  $(document).ready(function(){
+
+    toastr.options = {
+      "progressBar": true,
+      "positionClass": "toast-top-right"
+    }
+
+    window.addEventListener('success', event => {
+      toastr.success(event.detail.message);
+    });
+
+  });
+</script>
+  @stack('scripts');
+  @livewireScripts
+  <script src="//code.tidio.co/t8lxn6gv8zdoeemsalrmnblqc2oix6xt.js" async></script>
+</body>
 </html>

@@ -81,33 +81,16 @@
               data-parent="#sidebar-menu">
               <div class="sub-menu">
                 
-                
-                  
-                    <li >
-                      <a class="sidenav-item-link" href="user-profile.html">
-                        <span class="nav-text">User Profile</span>
-                        
-                      </a>
-                    </li>
-                  
-                
-
-                
-                
                 <li  class="has-sub" >
                   <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#authentication"
                     aria-expanded="false" aria-controls="authentication">
-                    <span class="nav-text">Authentication</span> <b class="caret"></b>
+                    <span class="nav-text">NewsLetter</span> <b class="caret"></b>
                   </a>
                   <ul  class="collapse"  id="authentication">
                     <div class="sub-menu">
                       
                       <li >
-                        <a href="sign-in.html">Sign In</a>
-                      </li>
-                      
-                      <li >
-                        <a href="sign-up.html">Sign Up</a>
+                        <a href="{{route('newsletter')}}">Mail</a>
                       </li>
                       
                     </div>
@@ -115,55 +98,6 @@
                 </li>
                 
 
-                
-                
-                <li  class="has-sub" >
-                  <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#others"
-                    aria-expanded="false" aria-controls="others">
-                    <span class="nav-text">Blog</span> <b class="caret"></b>
-                  </a>
-                  <ul  class="collapse"  id="others">
-                    <div class="sub-menu">
-                      
-                      <li >
-                        <a href="invoice.html">Category</a>
-                      </li>
-                      
-                      <li >
-                        <a href="error.html">Post List</a>
-                      </li>
-
-                      <li >
-                        <a href="error.html">Edit Post</a>
-                      </li>
-                      
-                    </div>
-                  </ul>
-                </li>
-
-                <li  class="has-sub" >
-                  <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#work"
-                    aria-expanded="false" aria-controls="work">
-                    <span class="nav-text">Work</span> <b class="caret"></b>
-                  </a>
-                  <ul  class="collapse"  id="work">
-                    <div class="sub-menu">
-                      
-                      <li >
-                        <a href="invoice.html">Category</a>
-                      </li>
-                      
-                      <li >
-                        <a href="error.html">Work List</a>
-                      </li>
-
-                      <li >
-                        <a href="error.html">Edit Work</a>
-                      </li>
-                      
-                    </div>
-                  </ul>
-                </li>
 
                 <li  class="has-sub" >
                   <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#contact"
@@ -174,19 +108,77 @@
                     <div class="sub-menu">
                       
                       <li >
-                        <a href="{{route('admin-contact')}}">Info</a>
+                        <a href="{{route('admin-contact')}}">Message</a>
                       </li>
-                      
-                      <li >
-                        <a href="error.html">Message</a>
-                      </li>
-                      
+                                            
                     </div>
                   </ul>
                 </li>
                 
 
                 
+              </div>
+            </ul>
+          </li>
+
+
+          <li  class="has-sub" >
+            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#blogs"
+              aria-expanded="false" aria-controls="blogs">
+              <i class="mdi mdi-image-filter-none"></i>
+              <span class="nav-text">Blogs</span> <b class="caret"></b>
+            </a>
+            <ul  class="collapse"  id="blogs"
+              data-parent="#sidebar-menu">
+              <div class="sub-menu">
+                
+                
+                  
+
+                <li  class="has-sub" >
+                  <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#blog"
+                    aria-expanded="false" aria-controls="blog">
+                    <span class="nav-text">Blog</span> <b class="caret"></b>
+                  </a>
+                  <ul  class="collapse"  id="blog">
+                    <div class="sub-menu">
+                      
+                      <li >
+                        <a href="invoice.html">Category</a>
+                      </li>
+                      
+                      <li >
+                        <a href="{{ route('posts.index') }}">Post List</a>
+                      </li>
+
+                      <li >
+                        <a href="{{route('posts.create')}}">Add Post</a>
+                      </li>
+                      
+                    </div>
+                  </ul>
+                </li>
+                <li  class="has-sub" >
+                  <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#category"
+                    aria-expanded="false" aria-controls="category">
+                    <span class="nav-text">Category</span> <b class="caret"></b>
+                  </a>
+                  <ul  class="collapse"  id="category">
+                    <div class="sub-menu">
+                      
+                      
+                      <li >
+                        <a href="{{ route('category.index') }}">Category List</a>
+                      </li>
+
+                      <li >
+                        <a href="{{route('category.create')}}">Add Category</a>
+                      </li>
+                      
+                    </div>
+                  </ul>
+                </li>
+
               </div>
             </ul>
           </li>
