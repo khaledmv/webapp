@@ -50,7 +50,11 @@
                     </div>
       
                     <div class="entry-content">
-                    {{ $post->excerpt }}
+
+                     
+
+                        {!! $post->post_excerpt!!}
+
                       <div class="read-more">
                         <a href="{{ route('blog.show', $post->slug ) }}">Read More</a>
                       </div>

@@ -41,7 +41,11 @@ class Post extends Model
       }
 
     public function getPostBodyAttribute($value){
-        return $this->body;
+      return $this->body ?  Markdown::convert($this->body)->getContent() : NULL;
+    }
+
+    public function getPostExcerptAttribute($value){
+      return $this->excerpt ?  Markdown::convert($this->excerpt)->getContent() : NULL;
     }
 
     

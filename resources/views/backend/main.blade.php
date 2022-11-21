@@ -20,7 +20,8 @@
   <link href="{{ asset('backend/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet" />
   <link href="{{ asset('backend/assets/plugins/daterangepicker/daterangepicker.css')}}" rel="stylesheet" />
   <link href="{{ asset('backend/assets/plugins/jasny/jasny.min.css')}}" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <link href="{{ asset('backend/assets/css/simplemde.min.css')}}" rel="stylesheet" />
+  {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"> --}}
 
   <!-- SLEEK CSS -->
   <link id="sleek-css" rel="stylesheet" href="{{asset('backend/assets/css/sleek.css')}}" />
@@ -228,9 +229,10 @@
   <script src="{{ asset('backend/assets/js/date-range.js')}}"></script>
   <script src="{{ asset('backend/assets/js/map.js')}}"></script>
   <script src="{{ asset('backend/assets/js/custom.js')}}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+  <script src="{{ asset('backend/assets/js/simplemde.min.js')}}"></script>
+  {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
         
-    <script>
+    {{-- <script>
       $(document).ready(function() {
         $('#summernote').summernote({
           tabsize: 2,
@@ -238,7 +240,12 @@
         });
         
       });  
-    </script>
+    </script> --}}
+
+<script>
+  var simplemde = new SimpleMDE({ element: document.getElementById("summernote") });
+  var simplemde = new SimpleMDE({ element: document.getElementById("summernote2") });
+  </script>
   
     @yield('script')
   

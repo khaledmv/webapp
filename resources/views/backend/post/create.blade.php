@@ -40,7 +40,7 @@
 
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Post excerpt</label>
-          <textarea class="form-control"  name="excerpt" id="exampleFormControlTextarea1" rows="3"> {{ old('title') }}</textarea>
+          <textarea class="form-control" id="summernote2" name="excerpt" id="exampleFormControlTextarea1" rows="3"> {{ old('title') }}</textarea>
         </div>
         @if ($errors->has('excerpt'))
         <div class="alert alert-danger">{{ $errors->first('excerpt') }}</div>

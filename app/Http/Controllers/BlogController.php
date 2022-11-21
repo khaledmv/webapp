@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    private $limit = 2;
+    private $limit = 5;
 
     // Show all blog post
     public function index(){

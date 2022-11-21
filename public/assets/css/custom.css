@@ -318,3 +318,9 @@ h3.contact-header__title {
   margin-left: 5px!important;
 
 }
+
+pre {
+  background: #2c284b!important;
+  color: #c9c7c7!important;
+  padding: 10px!important;
+}
