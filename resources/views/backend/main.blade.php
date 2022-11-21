@@ -20,6 +20,8 @@
   <link href="{{ asset('backend/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet" />
   <link href="{{ asset('backend/assets/plugins/daterangepicker/daterangepicker.css')}}" rel="stylesheet" />
   <link href="{{ asset('backend/assets/plugins/jasny/jasny.min.css')}}" rel="stylesheet" />
+  {{-- <link href="{{ asset('backend/assets/css/selectize.bootstrap4.css')}}" rel="stylesheet" /> --}}
+  <link href="{{ asset('backend/assets/css/jquery.tag-editor.css')}}" rel="stylesheet" />
   <link href="{{ asset('backend/assets/css/simplemde.min.css')}}" rel="stylesheet" />
   {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"> --}}
 
@@ -229,6 +231,7 @@
   <script src="{{ asset('backend/assets/js/date-range.js')}}"></script>
   <script src="{{ asset('backend/assets/js/map.js')}}"></script>
   <script src="{{ asset('backend/assets/js/custom.js')}}"></script>
+  <script src="{{ asset('backend/assets/js/jquery.tag-editor.min.js')}}"></script>
   <script src="{{ asset('backend/assets/js/simplemde.min.js')}}"></script>
   {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
         

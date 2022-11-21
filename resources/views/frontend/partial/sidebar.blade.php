@@ -32,7 +32,7 @@
     @endforeach
 
   </div><!-- End sidebar recent posts-->
-{{-- 
+
   <h3 class="sidebar-title">Tags</h3>
   <div class="sidebar-item tags">
     <ul>
@@ -42,6 +42,6 @@
       @endforeach
  
     </ul>
-  </div><!-- End sidebar tags--> --}}
+  </div><!-- End sidebar tags-->
 
 </div><!-- End sidebar -->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\backend;
 
+use App\Models\Tag;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -24,15 +25,24 @@ class PostController extends Controller
     }
 
 
+    public function tags(){
+        $tags = Tag::all();
+
+        return view('backend.tags.index', compact('tags'));
+    }
+
+
     public function create()
     {  
         
         $category = Category::all();
-        return view('backend.post.create', compact('category'));
+        $tags = Tag::all();
+        return view('backend.post.create', compact('category', 'tags'));
     }
 
     public function store(PostRequest $request)
     {
+
        $post = new Post();
 
         // $post->save();
@@ -52,7 +62,6 @@ class PostController extends Controller
              File::delete($destination);
          }
          $file = $request->file('image');
-         // $fileName = $file->getClientOriginalName();
          $extenstion = $file->getClientOriginalExtension();
          $fileName = time(). '.' . $extenstion;
 
@@ -62,6 +71,7 @@ class PostController extends Controller
        }
 
         $post->save();
+        $post->createTags($request->post_tags);
                
         return redirect()->route('posts.index')->with('succes', 'Post Create Succesfully');
     }
@@ -70,6 +80,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+     
         $category = Category::all();
         return view('backend.post.edit', compact('post','category'));
 
@@ -114,7 +125,9 @@ class PostController extends Controller
             $post->image = $fileName;
           }
 
+ 
         $post->update();
+        $post->createTags($request->post_tags);
 
         return redirect()->route('posts.index')->with('message', "User updated successfully");
 
@@ -131,6 +144,14 @@ class PostController extends Controller
 
             $post->delete();
             return redirect()->route('posts.index')->with('message', "Post Deleted successfully");
+   }
+
+
+   public function deleteTag($id){
+    $tag = Tag::find($id);
+
+        $tag->delete();
+        return redirect()->route('tags')->with('message', "Tags Deleted successfully");
    }
     
 }

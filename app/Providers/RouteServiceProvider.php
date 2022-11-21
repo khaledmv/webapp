@@ -48,10 +48,6 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });
-
-        // $this->bind('post', function($slug){
-        //     return Post::where('slug', $slug)->first();
-        // });
     }
 
     /**

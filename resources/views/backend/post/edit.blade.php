@@ -47,23 +47,33 @@
         <div class="alert alert-danger">{{ $errors->first('excerpt') }}</div>
       @endif
 
+
+
         <div class="mb-3">
-          <select class="form-select" name="category_id"  aria-label="Default select example">
-              
-          <option value=""  disabled selected>Select Category</option>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Category</label>
+            <select class="form-control" name="category_id" id="exampleFormControlSelect1">
+              <option value=""  disabled selected>Select Category</option>
              @foreach ($category as $item)
-                   <option value="{{ $item->id }}" {{ ( $item->id == $post->category_id) ? 'selected' : '' }} > {{ $item->title }}</option>
+               <option value="{{ $item->id }}" {{ ( $item->id == $post->category_id) ? 'selected' : '' }} > {{ $item->title }}</option>
              @endforeach
-          </select>
-          
+            </select>
         </div>
+        
         @if ($errors->has('category_id'))
             <div class="alert alert-danger">{{ $errors->first('category_id') }}</div>
          @endif
 
-         {{-- <div class="mb-3">
-          <input type="file" name="image">
-         </div> --}}
+
+         <div class="mb-3">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Tags</label>
+            <input type="text" name="post_tags" value="{{ $post->tags_list }}" id="input-tags"  class="form-control" >
+        </div>
+        
+        @if ($errors->has('post_tags'))
+            <div class="alert alert-danger">{{ $errors->first('post_tags') }}</div>
+         @endif
 
          <div class="fileinput fileinput-new" data-provides="fileinput">
           <div class="fileinput-new img-thumbnail" style="width: 200px; height: 150px;">
@@ -104,6 +114,22 @@
       $('#fileInput').value = "";
       $('#pviewInput').value = "";
      });
+
+    //  $("#input-tags").selectize({
+    //     delimiter: ",",
+    //     persist: false,
+    //     create: function (input) {
+    //       return {
+    //         value: input,
+    //         text: input,
+    //       };
+    //     },
+    //   });
+
+      $('input[name=post_tags]').tagEditor();
       
   </script>
+
+
+
 @endsection

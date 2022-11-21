@@ -4,8 +4,9 @@ namespace App\Models;
 
 use App\Models\Tag;
 use App\Models\Category;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 // use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Database\Eloquent\Model;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -46,6 +47,35 @@ class Post extends Model
 
     public function getPostExcerptAttribute($value){
       return $this->excerpt ?  Markdown::convert($this->excerpt)->getContent() : NULL;
+    }
+
+    public function createTags($tagString)
+
+    {
+          $tags = explode(",", $tagString);
+          $tagIds = [];
+
+          foreach ($tags as $tag) 
+          {        
+            $newTag = Tag::firstOrCreate(            
+              ['slug' => Str::slug($tag), 'name' => ucwords(trim($tag))]
+            ); 
+
+              $newTag->name = ucwords(trim($tag));
+              $newTag->slug = Str::slug($tag);
+              $newTag->save();  
+
+              $tagIds[] = $newTag->id;
+          }
+
+          $this->tags()->detach();
+        $this->tags()->attach($tagIds);
+      }
+
+
+    public function getTagsListAttribute()
+    {
+        return $this->tags->pluck('name');
     }
 
     

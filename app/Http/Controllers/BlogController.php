@@ -33,6 +33,16 @@ class BlogController extends Controller
     }
 
 
+    public function blogHomePage(){
+
+        $posts = Post::with('category')->orderBy('created_at', 'desc');
+      
+        $posts = $posts->simplePaginate(3);
+
+        return view('frontend.home',  compact('posts'));
+    }
+
+
 
     public function category(Category $category){
 

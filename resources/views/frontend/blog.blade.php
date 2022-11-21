@@ -44,7 +44,7 @@
                     <div class="entry-meta">
                       <ul>
                         
-                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{$post->created_at->diffForHumans(); }}</time></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="{{$post->created_at->diffForHumans(); }}">{{$post->created_at->diffForHumans(); }}</time></a></li>
                         <li class="d-flex align-items-center"><i class="bi bi-folder2"></i> <a href="{{route('blog.category', $post->category->slug )}}">{{ $post->category->title }}</a></li>
                       </ul>
                     </div>

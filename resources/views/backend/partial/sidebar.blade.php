@@ -154,6 +154,10 @@
                       <li >
                         <a href="{{route('posts.create')}}">Add Post</a>
                       </li>
+
+                      <li >
+                        <a href="{{route('tags')}}">Tags</a>
+                      </li>
                       
                     </div>
                   </ul>

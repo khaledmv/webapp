@@ -48,7 +48,7 @@
 
       <div class="mb-3">
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Category</label>
             <select class="form-control" name="category_id" id="exampleFormControlSelect1">
               <option value=""  disabled selected>Select Category</option>
              @foreach ($category as $item)
@@ -61,9 +61,16 @@
             <div class="alert alert-danger">{{ $errors->first('category_id') }}</div>
          @endif
 
-         {{-- <div class="mb-3">
-          <input type="file" name="image">
-         </div> --}}
+        
+         <div class="mb-3">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Tags</label>
+            <input type="text" name="post_tags" value="{{ old('post_tags') }}" id="input-tags"  class="form-control" >
+        </div>
+        
+        @if ($errors->has('post_tags'))
+            <div class="alert alert-danger">{{ $errors->first('post_tags') }}</div>
+         @endif
 
          <div class="fileinput fileinput-new" data-provides="fileinput">
           <div class="fileinput-new img-thumbnail" style="width: 200px; height: 150px;">
@@ -89,6 +96,7 @@
 
 @section('script')
   <script type="text/javascript">
+
      $('#title').on('blur', function(){
       var theTitle = this.value.toLowerCase().trim(),
           slugInput = $('#slug'),
@@ -99,5 +107,16 @@
           slugInput.val(theSlug);
 
      });
+
+     $("#input-tags").selectize({
+        delimiter: ",",
+        persist: false,
+        create: function (input) {
+          return {
+            value: input,
+            text: input,
+          };
+        },
+      });
   </script>
 @endsection

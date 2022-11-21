@@ -20,9 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend/home');
-})->name('home-page');
+Route::get('/', [BlogController::class, 'blogHomePage'])->name('home-page');
 
 
 Route::get('/contact', function () {
@@ -78,6 +76,9 @@ Route::get('/work', function () {
 
         Route::get('/newsletter', [ContactController::class, 'newsletter'])->name('newsletter');
         Route::get('/newsletter/email/{id}/delete', [ContactController::class, 'deleteNewsletter'])->name('newsletter.delete');
+
+        Route::get('/tags', [PostController::class, 'tags'])->name('tags');
+        Route::get('/newsletter/tags/{id}/delete', [PostController::class, 'deleteTag'])->name('tag.delete');
 
         Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
         Route::get('/create', [PostController::class, 'create'])->name('posts.create');

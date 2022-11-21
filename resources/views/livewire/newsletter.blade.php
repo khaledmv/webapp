@@ -2,8 +2,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center">
-            <h2 class="newsletter_header">Ecommerce Tips & Tricks </h2>
-            <p class="newsletter_subtitle">Sign Up Our News Letter To Get Ecommerce Tips & Tricks Faster</p>
+            <h2 class="newsletter_header">Get Ecommerce Tips </h2>
+            <p class="newsletter_subtitle">Sign Up Our News Letter To Get Ecommerce Tips Faster</p>
           </div>
           <div class="col-lg-6">
             <form wire:submit.prevent="submit">
