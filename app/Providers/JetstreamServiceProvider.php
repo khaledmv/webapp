@@ -30,9 +30,9 @@ class JetstreamServiceProvider extends ServiceProvider
 
         Jetstream::deleteUsersUsing(DeleteUser::class);
 
-        // Fortify::registerView(function () {
-        //     return view('frontend/home');
-        // });
+        Fortify::registerView(function () {
+            return abort(404);
+        });
     }
 
     /**

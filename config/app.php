@@ -163,6 +163,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -178,6 +180,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+
 
     ],
 

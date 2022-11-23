@@ -142,11 +142,7 @@
                   </a>
                   <ul  class="collapse"  id="blog">
                     <div class="sub-menu">
-                      
-                      <li >
-                        <a href="invoice.html">Category</a>
-                      </li>
-                      
+                                          
                       <li >
                         <a href="{{ route('posts.index') }}">Post List</a>
                       </li>

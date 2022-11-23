@@ -98,6 +98,8 @@
 </script>
   @stack('scripts');
   @livewireScripts
-  <script src="//code.tidio.co/t8lxn6gv8zdoeemsalrmnblqc2oix6xt.js" async></script>
+  {{-- <script src="//code.tidio.co/t8lxn6gv8zdoeemsalrmnblqc2oix6xt.js" async></script> --}}
+
+  {!! JsonLd::generate() !!}
 </body>
 </html>

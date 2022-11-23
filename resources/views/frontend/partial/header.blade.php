@@ -4,15 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>WebAiid | Shopify Web Design Agency</title>
-  <meta content="" name="description">
-
-  <meta content="" name="keywords">
+  {!! SEOMeta::generate() !!}
+  {!! OpenGraph::generate() !!}
+  {!! Twitter::generate() !!}
 
   <!-- Favicons -->
-  <link href="assets/img/favicon/favicon.png" rel="icon">
-  <link href="assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{asset('assets/img/favicon/favicon.png')}}" rel="icon">
+  <link href="{{asset('assets/img/favicon/apple-touch-icon.png')}}" rel="apple-touch-icon">
    <!-- Boxicon -->
 
   <!-- Google Fonts -->
