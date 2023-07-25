@@ -28,7 +28,7 @@
           <a href=" {{ route('work.show', $work->id )}}" class="img-box">
             <img src="{{ $work->work_img }}" loading="lazy"  class="gallery_image" alt="{{ $work->title }}"> 
           </a>
-          <span class="image-cpt-box"> <a href="{{ route('work.show', $work->id)}}"> View Details</a></span>
+          <span class="image-cpt-box"> <a href="{{ route('work.show', $work->id)}}">Case studies </a></span>
         </div>
         @endforeach
       </div>

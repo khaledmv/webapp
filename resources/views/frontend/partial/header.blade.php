@@ -31,7 +31,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 
-  {{-- <script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YZKF52QT2T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YZKF52QT2T');
+</script>
+
+
+
+  <script>
     (function(d, w, c) {
         w.ChatraID = 'geieStjankjxd7CN2';
         var s = d.createElement('script');
@@ -42,7 +54,7 @@
         s.src = 'https://call.chatra.io/chatra.js';
         if (d.head) d.head.appendChild(s);
     })(document, window, 'Chatra');
-</script> --}}
+</script>
 
 
   
