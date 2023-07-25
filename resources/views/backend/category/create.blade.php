@@ -15,7 +15,7 @@
           @csrf
          
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Post Title</label>
+          <label for="exampleFormControlInput1" class="form-label">Categroy Title</label>
           <input type="text" name="title"  class="form-control" id="title" value="{{ old('title') }}">
 
         </div>
@@ -24,7 +24,7 @@
           @endif
 
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Post Slug</label>
+          <label for="exampleFormControlTextarea1" class="form-label">Category Slug</label>
           <input type="text" name="slug" value="{{ old('slug') }}"  class="form-control" id="slug" >
         </div>  
 

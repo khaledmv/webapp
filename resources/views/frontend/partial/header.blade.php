@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 
-  <script>
+  {{-- <script>
     (function(d, w, c) {
         w.ChatraID = 'geieStjankjxd7CN2';
         var s = d.createElement('script');
@@ -42,7 +42,9 @@
         s.src = 'https://call.chatra.io/chatra.js';
         if (d.head) d.head.appendChild(s);
     })(document, window, 'Chatra');
-</script>
+</script> --}}
+
+
   
 
 </head>
@@ -54,17 +56,17 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="{{route('home-page')}}" class="logo d-flex align-items-center">
-        <img src="{{asset('assets/img/webaiidlogo.png')}}" alt="web design shopify agency">
+        <img src="{{asset('assets/img/logo-web.png')}}" alt="web design shopify agency">
         
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
           
-          <li><a class="nav-link scrollto" href="{{route('home-page')}}">About Us</a></li>
+          <li><a class="nav-link scrollto" href="{{route('home-page')}}">Home</a></li>
           <li><a class="nav-link scrollto" href="{{route('blog-page')}}">Blog</a></li>
-          <li><a class="nav-link scrollto" href="{{route('work-page')}}">Our Work</a></li>
-          <li><a class="getstarted scrollto" href="{{ route('contact-page')}}">Get Started</a></li>
+          <li><a class="nav-link scrollto" href="{{route('work-page')}}">Work</a></li>
+          <li><a class="getstarted scrollto" href="{{ route('contact-page')}}">Get A Quote</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Portfolio;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\JsonLd;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -48,6 +50,7 @@ class BlogController extends Controller
         }
         
         $posts = $posts->simplePaginate($this->limit);
+        
 
         return view('frontend.blog',  compact('posts'));
     }
@@ -71,11 +74,12 @@ class BlogController extends Controller
         JsonLd::setDescription('Need to hire a Shopify Expert? We are official Shopify partners &amp; experts offer Shopify design &amp; development. Get a quote from our Shopify agency today!');
         JsonLd::addImage('https://webaiid.com/assets/img/webaiidlogo.png');
 
-        $posts = Post::with('category')->orderBy('created_at', 'desc');
-      
+        $posts = Post::with('category')->orderBy('created_at', 'desc');         
         $posts = $posts->simplePaginate(3);
 
-        return view('frontend.home',  compact('posts'));
+        $reviews = Testimonial::orderBy('created_at', 'desc')->get();
+        $portfolios = Portfolio::all();
+        return view('frontend.home',  compact('posts', 'reviews', 'portfolios'));
     }
 
 

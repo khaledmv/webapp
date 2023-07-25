@@ -4,15 +4,15 @@
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
         <h3 data-aos="fade-up">Help Store Owners grow through </h3>
-        <h1 data-aos="fade-up">Innovation, consistency and quality of delivered Shopify solutions and services</h1>
+        <h1 data-aos="fade-up">Innovation, consistency and quality of delivered <span style="color:#FF498A;">Web Design</span>  services</h1>
         <h2 class="header__iconBox" data-aos="fade-up" data-aos-delay="400">
-          <span class="header-icon"><ion-icon class="header-icon-orange" name="stats-chart-outline"></ion-icon> Increase Store Performance</span>
-          <span class="header-icon"><ion-icon class="header-icon-orangered" name="speedometer-outline"></ion-icon> Fast Delivery</span>
+          <span class="header-icon"><ion-icon class="header-icon-orange" name="stats-chart-outline"></ion-icon> 99.99% Store Performance</span>
+          <span class="header-icon"><ion-icon class="header-icon-orangered" name="speedometer-outline"></ion-icon> Quality & Fast Delivery</span>
          </h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
-            <a href="{{route('contact-page')}}" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Get Started</span>
+            <a href="https://calendly.com/shopify-khaled/30min" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Book An Appointment</span>
               <i class="bi bi-arrow-right"></i>
             </a>
           </div>

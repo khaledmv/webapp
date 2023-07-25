@@ -449,7 +449,7 @@ section {
   /* background: url(../img/hero-bg.png) top center no-repeat; */
   /* background-size: cover; */
   background-color: #111827;
-  clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 96vh, 0% 100%);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 

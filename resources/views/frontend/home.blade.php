@@ -44,68 +44,30 @@
 
         <header class="section-header">
           <h2>WHAT WE DO</h2>
-          <p>If you're ready to start a Business, develop or scale on Shopify we have the solution</p>
+          <p>If you're ready to start a business, develop or scale on online, we have the solution</p>
         </header>
 
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-box ">
-              <ion-icon class="bx" name="cog-outline"></ion-icon>
-              <h1 class="services__title">Web Design & Development</h1>
+              <ion-icon class="bx" name="albums-outline"></ion-icon>
+              
+              <h1 class="services__title">Web Design </h1>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-box ">
               <ion-icon class="bx" name="grid-outline"></ion-icon>
-              <h1 class="services__title">Shopify Theme Tweeks & Changes</h1>
+              <h1 class="services__title">Web Development</h1>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box ">
               <ion-icon class="bx" name="analytics-outline"></ion-icon>
-              <h1 class="services__title">Shopify SEO & Content Marketing</h1>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-box ">
-              <ion-icon class="bx" name="albums-outline"></ion-icon>
-              <h1 class="services__title">Product Landing Page</h1>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-box ">
-              <ion-icon class="bx" name="stopwatch-outline"></ion-icon>
-              <h1 class="services__title">Monthly Shopify Support</h1>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-box">
-              <ion-icon class="bx" name="code-working-outline"></ion-icon>
-              <h1 class="services__title">Custom Shopify Theme Development</h1>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-box">
-              <ion-icon class="bx" name="bug-outline"></ion-icon>
-              <h1 class="services__title">Shopify Store Audits</h1>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-box">
-              <ion-icon class="bx" name="stats-chart-outline"></ion-icon>
-              <h1 class="services__title">Increase Store Conversation </h1>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-box">
-              <ion-icon class="bx" name="hourglass-outline"></ion-icon>
-              <h1 class="services__title">Shopify Performance Optimization</h1>
+              <h1 class="services__title">SEO & Content Marketing</h1>
             </div>
           </div>
 
@@ -124,7 +86,7 @@
 
       <header class="section-header">
         <h2>Why we are ???</h2>
-        <p>Because we get the job done. On time. On budget. To the highest standards</p>
+        <p>Because we get the job done. To the highest standards</p>
       </header>
 
       <div class="row">
@@ -139,14 +101,14 @@
             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
               <div class="feature-box d-flex align-items-center">
                 <i class="bi bi-check"></i>
-                <h3>Fast Delivery</h3>
+                <h3>Complete and Total Transparency</h3>
               </div>
             </div>
 
             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
               <div class="feature-box d-flex align-items-center">
                 <i class="bi bi-check"></i>
-                <h3>Trusted Brand</h3>
+                <h3>Intentionality and Integrity</h3>
               </div>
             </div>
 
@@ -160,21 +122,95 @@
             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
               <div class="feature-box d-flex align-items-center">
                 <i class="bi bi-check"></i>
-                <h3>On-time Delivery</h3>
+                <h3>A Genuine Focus on Your ROI</h3>
               </div>
             </div>
 
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Free Consultancy</h3>
-              </div>
-            </div>
 
           </div>
         </div>
 
       </div> <!-- / row -->
+
+
+      <header class="section-header design-portfolio">
+        <h2>Portfolio </h2>
+        <p>See Our Most Recent Work </p>
+      </header>
+
+      <div class="row">
+
+        @foreach($portfolios as $portfolio )
+
+        <div class="col-lg-6">
+          <img src="{{ $portfolio->image_url }}" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+          <div class="row align-self-center gy-4">
+
+            <div  data-aos="zoom-out" data-aos-delay="200">
+              <div class="feature-box portfolio-feature-box">
+                <h4 class="feature-box__title"> {{ $portfolio->title }}</h4>
+                <p>{{ $portfolio->para }}</p>
+                <a class="feature-box__btn" href="{{ route('work-page')}}">{{$portfolio->buttonText}}<i class="bi bi-arrow-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        @endforeach
+
+      </div> <!-- / row -->
+
+
+          <!-- ======= Testimonials Section ======= -->
+          @if($reviews->count())
+          <section id="testimonials" class="testimonials">
+    
+            <div class="container" data-aos="fade-up">
+    
+              <header class="section-header">
+                <h2>Testimonials</h2>
+                <p>What clients are saying about us</p>
+              </header>
+    
+            
+    
+              <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+    
+                  @foreach($reviews as $review)
+    
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                      <p>
+                        {{ $review->review }}
+                      </p>
+                      <div class="profile mt-auto">
+                        @if($review->image)
+                        <img src="{{$review->image_url}}" class="testimonial-img" alt="{{$review->name}}">
+                        @endif
+                        <h3>{{$review->name}}</h3>
+                        <h4>{{ $review->tagline }}</h4>
+                      </div>
+                    </div>
+                  </div><!-- End testimonial item -->
+    
+                  @endforeach
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+    
+            </div>
+    
+          </section>
+          @endif
+        <!-- End Testimonials Section -->
+      
 
       <!-- Feature Tabs -->
       <div class="row feture-tabs" data-aos="fade-up">
@@ -185,10 +221,10 @@
           <!-- Tabs -->
           <ul class="nav nav-pills mb-3">
             <li>
-              <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Trusted Brand</a>
+              <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Shopify</a>
             </li>
             <li>
-              <a class="nav-link" data-bs-toggle="pill" href="#tab2">Design Corner</a>
+              <a class="nav-link" data-bs-toggle="pill" href="#tab2">WordPress</a>
             </li>
            
           </ul><!-- End Tabs -->
@@ -209,9 +245,25 @@
                 <h4>Fastest time-to-market solutions
                   from scratch</h4>
               </div>
+
               <div class="d-flex align-items-center mb-2">
                 <i class="bi bi-check2"></i>
-                <h4>2 months of warranty</h4>
+                <h4>Quick Response</h4>
+              </div>
+
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>24/7 Hours Support</h4>
+              </div>
+
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Online Training</h4>
+              </div>
+
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Share Weekly Market Tips</h4>
               </div>
               
             </div><!-- End Tab 1 Content -->
@@ -239,85 +291,18 @@
         </div>
 
         <div class="col-lg-6">
-          <img src="assets/img/features-2.png" class="img-fluid" alt="">
+          <img src="assets/img/features-2.png" class="img-fluid" alt="webaiid-webdesign-service">
         </div>
 
       </div><!-- End Feature Tabs -->
-
-      <!-- Feature Icons -->
-      <div class="row feature-icons" data-aos="fade-up">
-        <h3 class="py-4">WooCommerce to Shopify Migration Service</h3>
-
-        <div class="row">
-
-          <div class="col-xl-4 marginBottm-6 text-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/features-3.png" class="img-fluid p-4" alt="">
-          </div>
-
-          <div class="col-xl-8 d-flex content">
-            <div class="row align-self-center gy-4">
-
-              <div class="col-md-6 icon-box" data-aos="fade-up">
-                <i class="ri-line-chart-line"></i>
-                <div>
-                  <h4>Store Convert Into Shopify</h4>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i class="ri-stack-line"></i>
-                <div>
-                  <h4>Import Export Data</h4>
-                  
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <i class="ri-brush-4-line"></i>
-                <div>
-                  <h4>Custom or Similar Design</h4>
-                  
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                <i class="ri-magic-line"></i>
-                <div>
-                  <h4>Third-party App Integration</h4>
-                  
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                <i class="ri-command-line"></i>
-                <div>
-                  <h4>SEO Optimize</h4>
-                  
-                </div>
-              </div>
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                <i class="ri-command-line"></i>
-                <div>
-                  <h4>Store Maintain & Supporting</h4>
-                  
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div><!-- End Feature Icons -->
 
     </div>
 
   </section><!-- End Features Section -->
 
-  <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Testimonials Section ======= -->
 
-  <!-- End Testimonials Section -->
-
+    <!-- End Testimonials Section -->
 
   <!-- ======= Clients Section ======= -->
  
@@ -343,10 +328,10 @@
           @foreach ($posts as $post)
           <div class="col-lg-4">
             <div class="post-box">
-              @if ($post->image)
+              @if ($post->image_url)
               <div class="entry-img">
-               <img src="{{ $post->image_url }}" alt="{{$post->title }}" class="img-fluid">
-             </div>
+                <img src="{{ $post->image_url }}" alt="{{$post->title }}" class="img-fluid">
+              </div>
               @endif
               <span class="post-date">{{$post->created_at->diffForHumans(); }}</span>
               <h3 class="post-title"> {{ $post->title }}</h3>

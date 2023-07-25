@@ -49,12 +49,7 @@
                         
                       </a>
                     </li>
-                  
-                
-
-                
-                
-                  
+       
                     <li >
                       <a class="sidenav-item-link">
                         <span class="nav-text">Analytics</span>
@@ -63,8 +58,7 @@
                         
                       </a>
                     </li>
-                  
-                
+           
 
                 
               </div>
@@ -114,6 +108,28 @@
                     </div>
                   </ul>
                 </li>
+
+                <li  class="has-sub" >
+                  <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#testimonial"
+                    aria-expanded="false" aria-controls="testimonial">
+                    <span class="nav-text">Testimonials</span> <b class="caret"></b>
+                  </a>
+                  <ul  class="collapse"  id="testimonial">
+                    <div class="sub-menu">
+                      
+                      
+                      <li >
+                        <a href="{{ route('testimonial.index') }}">Testimonial List</a>
+                      </li>
+
+                      <li >
+                        <a href="{{ route('testimonial.create') }}">Testimonial create</a>
+                      </li>
+                      
+                    </div>
+                  </ul>
+                </li>
+
                 
 
                 
@@ -179,6 +195,66 @@
                   </ul>
                 </li>
 
+            
+              </div>
+            </ul>
+          </li>
+
+          <li  class="has-sub" >
+            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#portfolio"
+              aria-expanded="false" aria-controls="portfolio">
+              <i class="mdi mdi-image-filter-none"></i>
+              <span class="nav-text">Portfolio</span> <b class="caret"></b>
+            </a>
+            <ul  class="collapse"  id="portfolio"
+              data-parent="#sidebar-menu">
+              <div class="sub-menu">
+                
+                
+                  
+
+                <li  class="has-sub" >
+                  <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#work"
+                    aria-expanded="false" aria-controls="work">
+                    <span class="nav-text">Work</span> <b class="caret"></b>
+                  </a>
+                  <ul  class="collapse"  id="work">
+                    <div class="sub-menu">
+                                          
+                      <li >
+                        <a href="{{ route('work.index') }}">All Work</a>
+                      </li>
+
+                      <li >
+                        <a href="{{route('work.create')}}">Add Work</a>
+                      </li>
+
+                      
+                    </div>
+                  </ul>
+                </li>
+                <li  class="has-sub" >
+                  <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#portfoliosub"
+                    aria-expanded="false" aria-controls="portfoliosub">
+                    <span class="nav-text">Portfolio</span> <b class="caret"></b>
+                  </a>
+                  <ul  class="collapse"  id="portfoliosub">
+                    <div class="sub-menu">
+                      
+                      
+                      <li >
+                        <a href="{{ route('portfolio.index')}}">Edit</a>
+                      </li>
+
+                      {{-- <li>
+                        <a href="{{ route(('portfolio.create')) }}">Add portfolio</a>
+                      </li> --}}
+                      
+                    </div>
+                  </ul>
+                </li>
+
+            
               </div>
             </ul>
           </li>
