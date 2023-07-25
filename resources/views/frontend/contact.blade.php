@@ -7,14 +7,14 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h3 data-aos="fade-up">We are more than happy to assist you to grow business</h3>
+        <h1 data-aos="fade-up">We are more than happy to assist you to grow business</h1>
         <h2 class="header__iconBox" data-aos="fade-up" data-aos-delay="400">
           <span class="header-icon"><ion-icon class="header-icon-orange" name="stats-chart-outline"></ion-icon> Increase Store Performance</span>
           <span class="header-icon"><ion-icon class="header-icon-orangered" name="speedometer-outline"></ion-icon> Fast Delivery</span>
          </h2>
       </div>
       <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="assets/img/contact.svg" class="img-fluid hero__svg" alt="">
+        <img src="assets/img/contact.svg" loading="lazy" class="img-fluid hero__svg" alt="webaiid get a quote">
         
       </div>
     </div>

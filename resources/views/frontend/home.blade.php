@@ -25,9 +25,9 @@
 
         <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
           <div class="composition">
-            <img src="{{asset('assets/img/about/webdesign.jpg')}}" alt="webaiid webdesgin 1" class="composition__photo composition__photo--1">
-            <img src="{{asset('assets/img/about/webdesign2.jpg')}}" alt="webaiid webdesgin 2" class="composition__photo composition__photo--2">
-            <img src="{{asset('assets/img/about/webdesign3.jpg')}}" alt="webaiid webdesgin 3" class="composition__photo composition__photo--3">
+            <img src="{{asset('assets/img/about/webdesign.jpg')}}" alt="webaiid digital agency" loading="lazy" class="composition__photo composition__photo--1">
+            <img src="{{asset('assets/img/about/webdesign2.jpg')}}" alt="webaid shopify design" loading="lazy" class="composition__photo composition__photo--2">
+            <img src="{{asset('assets/img/about/webdesign3.jpg')}}" alt="webaiid wordpress development" loading="lazy" class="composition__photo composition__photo--3">
           </div>
         </div>
 
@@ -92,7 +92,7 @@
       <div class="row">
 
         <div class="col-lg-6">
-          <img src="assets/img/features.png" class="img-fluid" alt="">
+          <img src="assets/img/features.png" class="img-fluid" alt="webaiid about us" loading="lazy">
         </div>
 
         <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
@@ -143,7 +143,7 @@
         @foreach($portfolios as $portfolio )
 
         <div class="col-lg-6">
-          <img src="{{ $portfolio->image_url }}" class="img-fluid" alt="">
+          <img src="{{ $portfolio->image_url }}" loading="lazy" class="img-fluid" alt="webaiid web design portfolio">
         </div>
 
         <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
@@ -192,7 +192,7 @@
                       </p>
                       <div class="profile mt-auto">
                         @if($review->image)
-                        <img src="{{$review->image_url}}" class="testimonial-img" alt="{{$review->name}}">
+                        <img src="{{$review->image_url}}" loading="lazy" class="testimonial-img" alt="{{$review->name}}">
                         @endif
                         <h3>{{$review->name}}</h3>
                         <h4>{{ $review->tagline }}</h4>
@@ -291,7 +291,7 @@
         </div>
 
         <div class="col-lg-6">
-          <img src="assets/img/features-2.png" class="img-fluid" alt="webaiid-webdesign-service">
+          <img src="assets/img/features-2.png" loading="lazy" class="img-fluid" alt="webaiid-webdesign-service" >
         </div>
 
       </div><!-- End Feature Tabs -->
@@ -302,13 +302,6 @@
 
     <!-- ======= Testimonials Section ======= -->
 
-    <!-- End Testimonials Section -->
-
-  <!-- ======= Clients Section ======= -->
- 
-  <!-- End Clients Section -->
-
-  <!-- ======= Recent Blog Posts Section ======= -->
  
   <section id="recent-blog-posts" class="recent-blog-posts">
 
@@ -330,7 +323,7 @@
             <div class="post-box">
               @if ($post->image_url)
               <div class="entry-img">
-                <img src="{{ $post->image_url }}" alt="{{$post->title }}" class="img-fluid">
+                <img src="{{ $post->image_url }}" loading="lazy" alt="{{$post->title }}" class="img-fluid">
               </div>
               @endif
               <span class="post-date">{{$post->created_at->diffForHumans(); }}</span>

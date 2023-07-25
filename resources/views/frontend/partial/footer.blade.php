@@ -8,7 +8,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="{{route('home-page')}}" class="logo d-flex align-items-center">
-              <img src="{{asset('assets/img/webaiidlogo.png')}}" alt="web design shopify agency">
+              <img src="{{asset('assets/img/webaiidlogo.png')}}" loading="lazy" alt="webaiid shopify agency">
           
             </a>
             <p>We started developing with Shopify in the very early days and have since helped hundreds of brands succeed on the platform Our mission is to help eCommerce businesses grow through innovation, consistency and quality of delivered Shopify solutions and services</p>

@@ -58,7 +58,7 @@ class BlogController extends Controller
 
     public function blogHomePage(){
 
-        SEOMeta::setTitle('Shopify Agency');
+        SEOMeta::setTitle('Web design agency');
         SEOMeta::setDescription('Need to hire a Shopify Expert? We are official Shopify partners &amp; experts offer Shopify design &amp; development. Get a quote from our Shopify agency today!');
         SEOMeta::setCanonical('https://webaiid.com/blog/');
 

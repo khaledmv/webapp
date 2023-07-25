@@ -13,6 +13,22 @@ use Artesaos\SEOTools\Facades\TwitterCard;
 class FrontWorkController extends Controller
 {
     public function index(){
+
+        SEOMeta::setTitle('Web design portfolio');
+        SEOMeta::setDescription("See webaiid web design portfolio");
+        SEOMeta::setCanonical('https://webaiid.com/blog/');
+
+        OpenGraph::setDescription('See webaiid web design portfolio');
+        OpenGraph::setTitle('Webaiid web design portfolio');
+        OpenGraph::setUrl('https://webaiid.com/blog/');
+        OpenGraph::addProperty('type', 'articles');
+
+        TwitterCard::setTitle('Web design portfolio');
+        TwitterCard::setSite('@webaiid');
+
+        JsonLd::setTitle('Web design portfolio');
+        JsonLd::setDescription('See webaiid web design portfolio');
+        JsonLd::addImage('https://webaiid.com/assets/img/webaiidlogo.png');
       
         $works = Work::orderBy('created_at', 'desc')->get();
         return view('frontend/work', compact('works'));

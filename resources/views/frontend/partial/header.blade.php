@@ -56,7 +56,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="{{route('home-page')}}" class="logo d-flex align-items-center">
-        <img src="{{asset('assets/img/logo-web.png')}}" alt="web design shopify agency">
+        <img src="{{asset('assets/img/logo-web.png')}}" loading="lazy" alt="web design shopify agency">
         
       </a>
 

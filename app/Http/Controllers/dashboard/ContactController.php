@@ -24,7 +24,6 @@ class ContactController extends Controller
 
     public function delete($id){
             $mail = ContactForm::find($id);
-
             $mail->delete();
 
             return redirect()->route('admin-contact')->with('message', 'Mail Deleted Successfully');

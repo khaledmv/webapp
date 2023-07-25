@@ -34,7 +34,7 @@
                 <div class="col-md-12 col-lg-6 view-001">
                     <div class="project-images">
                         @if($work->work_img )
-                        <img class="project-images_item" src="{{ $work->work_img }}" alt="{{ $work->title }}">
+                        <img class="project-images_item" src="{{ $work->work_img }}" loading="lazy" alt="{{ $work->title }}">
 
                         @endif 
 
@@ -77,14 +77,14 @@
                <p class="result-title-para">The result of this project was a website that is fun to browse through as it has a very unique brand that conveys an inviting, colorful, joyful tone.</p>
                <div class="result-images_left">
                 @if ($work->result1_img)
-                <img src="{{ $work->result1_img }}" alt="{{ $work->title }} result-img-1 " class="result-image">
+                <img src="{{ $work->result1_img }}" alt="{{ $work->title }} result-img-1" loading="lazy" class="result-image">
                 @endif
                </div>
               </div>
               <div class="col-md-12 col-lg-6">
                 <div class="result-images_right">
                   @if ($work->result2_img)
-                  <img src="{{ $work->result2_img }}" alt="{{ $work->title }} resutl-img-2" class="result-image">
+                  <img src="{{ $work->result2_img }}" alt="{{ $work->title }} resutl-img-2" loading="lazy" class="result-image">
                   @endif
                  </div>
               </div>
@@ -102,14 +102,14 @@
 
                 <div class="work-font-images">
                   @if ($work->font_img)
-                  <img src="{{ $work->font_img }}" alt="{{ $work->title }} font-img-2" class="result-image">
+                  <img src="{{ $work->font_img }}" alt="{{ $work->title }} font-img-2" loading="lazy" class="result-image">
                   @endif
                 </div>
 
                 <div class="color_name">
                   
                   @if ($work->color_img)
-                  <img src="{{ $work->color_img }}" alt="{{ $work->title }} color-img-2" class="result-image">
+                  <img src="{{ $work->color_img }}" alt="{{ $work->title }} color-img-2" loading="lazy" class="result-image">
                   @endif
                 </div>
 

@@ -28,7 +28,7 @@
                 <article class="entry entry-single">
     
                   <div class="entry-img">
-                    <img src="{{$post->image_url}}" alt="" class="img-fluid">
+                    <img src="{{$post->image_url}}" alt="{{ $post->title }}" loading="lazy" class="img-fluid">
                   </div>
     
                   <h2 class="entry-title">

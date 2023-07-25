@@ -33,7 +33,7 @@
         
                    @if ($post->image)
                    <div class="entry-img">
-                    <img src="{{ $post->image_url }}" alt="{{$post->title }}" class="img-fluid">
+                    <img src="{{ $post->image_url }}" loading="lazy" alt="{{$post->title }}" class="img-fluid">
                   </div>
                    @endif
       
