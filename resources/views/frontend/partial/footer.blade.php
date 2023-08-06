@@ -7,8 +7,8 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <a href="{{route('home-page')}}" class="logo d-flex align-items-center">
-              <img src="{{asset('assets/img/webaiidlogo.png')}}" loading="lazy" alt="webaiid shopify agency">
+            <a href="{{route('home-page')}}" class="logo footer-logo d-flex align-items-center">
+              <img src="{{asset('assets/img/logo-web.png')}}" loading="lazy" alt="webaiid digital agency">
           
             </a>
             <p>We started developing with Shopify in the very early days and have since helped hundreds of brands succeed on the platform Our mission is to help eCommerce businesses grow through innovation, consistency and quality of delivered Shopify solutions and services</p>
@@ -59,7 +59,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>WebAiid</strong>. All Rights Reserved</strong>
+        Copyright &copy; 2023 . All Rights Reserved <strong>WebAiid</strong>
       </div>
       
     </div>
@@ -128,6 +128,5 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  {!! JsonLd::generate() !!}
 </body>
 </html>

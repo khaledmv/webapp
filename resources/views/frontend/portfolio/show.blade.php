@@ -1,6 +1,8 @@
 @extends('frontend.app')
 
-
+@section('canonical')
+<link rel="canonical" href="https://webaiid.com/work/{{ $work->id}}/" />
+@endsection
 
 
 @section('content')

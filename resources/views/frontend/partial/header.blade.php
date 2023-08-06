@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  {!! SEOMeta::generate() !!}
+  @yield('canonical')
+  {!! SEOMeta::generate(true) !!}
   {!! OpenGraph::generate() !!}
   {!! Twitter::generate() !!}
+  {!! JsonLd::generate() !!}
 
   <!-- Favicons -->
   <link href="{{asset('assets/img/favicon/favicon.png')}}" rel="icon">
@@ -75,10 +77,19 @@
       <nav id="navbar" class="navbar">
         <ul>
           
-          <li><a class="nav-link scrollto" href="{{route('home-page')}}">Home</a></li>
-          <li><a class="nav-link scrollto" href="{{route('blog-page')}}">Blog</a></li>
-          <li><a class="nav-link scrollto" href="{{route('work-page')}}">Work</a></li>
-          <li><a class="getstarted scrollto" href="{{ route('contact-page')}}">Get A Quote</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('/')) ? 'active-menu' : '' }}" href="{{route('home-page')}}">Home</a></li>
+          <li class="dropdown"><a href="#"><span class="nav-link scrollto ">Our Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{ route('webdesign-page')}}">Website Development</a></li>
+              <li><a href="{{ route('seo-page')}}">Search Engine Optimization</a></li>
+              <li><a href="{{ route('wp-page')}}">Wordpress Development</a></li>
+              <li><a href="{{ route('shopify-page')}}">Shopify Development</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto {{ (request()->is('blog')) ? 'active-menu' : '' }}" href="{{route('blog-page')}}">Blog</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('work')) ? 'active-menu' : '' }}" href="{{route('work-page')}}">Work</a></li>
+          <li><a class="getstarted scrollto {{ (request()->is('contact')) ? 'active-menu' : '' }}" href="{{ route('contact-page')}}">Let's Talk</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

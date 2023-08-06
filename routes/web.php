@@ -8,6 +8,7 @@ use App\Http\Controllers\backend\PostController;
 
 use App\Http\Controllers\backend\BWorkController;
 use App\Http\Controllers\backend\CategoryController;
+use App\Http\Controllers\frontend\ServiceController;
 use App\Http\Controllers\backend\PortfolioController;
 use App\Http\Controllers\dashboard\ContactController;
 use App\Http\Controllers\dashboard\BlogPostController;
@@ -28,33 +29,37 @@ use App\Http\Controllers\dashboard\DashboardController;
 
 Route::get('/', [BlogController::class, 'blogHomePage'])->name('home-page');
 
+Route::get('/contact/', function () { return view('frontend/contact'); })->name('contact-page');
 
-Route::get('/contact', function () {
-    return view('frontend/contact');
-})->name('contact-page');
-
-
-
-Route::get('/blog', [BlogController::class, 'index'])->name('blog-page');
-Route::get('/blog/{post}', [BlogController::class, 'show'])->name('blog.show');
-
-Route::get('/blog/category/{category}', [BlogController::class, 'category'])->name('blog.category');
-Route::get('/blog/tag/{tag}', [BlogController::class, 'tag'])->name('blog.tag');
+// blog 
+Route::get('/blog/', [BlogController::class, 'index'])->name('blog-page');
+Route::get('/blog/{post}/', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/blog/category/{category}/', [BlogController::class, 'category'])->name('blog.category');
+Route::get('/blog/tag/{tag}/', [BlogController::class, 'tag'])->name('blog.tag');
 
 
-// Work route 
+// services 
+
+Route::get('/services/web-design/', [ServiceController::class, 'webdesign'])->name('webdesign-page');
+
+Route::get('/services/search-engine-optimization/', [ServiceController::class, 'seo'])->name('seo-page');
+Route::get('/services/social-media-management/', [ServiceController::class, 'smm'])->name('smm-page');
+Route::get('/services/wordpress-development/', [ServiceController::class, 'wpDevelopment'])->name('wp-page');
+Route::get('/services/shopify-development/', [ServiceController::class, 'shopifyDevelopment'])->name('shopify-page');
 
 
-Route::get('/portfolio', function () {
+// Work 
+
+Route::get('/portfolio/', function () {
     return view('frontend.portfolio.index');
 })->name('portfolio-page');
 
-Route::get('/work', function () {
+Route::get('/work/', function () {
     return view('frontend/work');
 })->name('work-page');
 
-Route::get('/work', [FrontWorkController::class, 'index'])->name('work-page');
-Route::get('/work/{work}', [FrontWorkController::class, 'show'])->name('work.show');
+Route::get('/work/', [FrontWorkController::class, 'index'])->name('work-page');
+Route::get('/work/{work}/', [FrontWorkController::class, 'show'])->name('work.show');
 
 
 

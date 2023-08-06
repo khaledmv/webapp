@@ -1,5 +1,9 @@
 @extends('frontend.app')
 
+@section('canonical')
+<link rel="canonical" href="https://webaiid.com/work/" />
+@endsection
+
 @section('hero-content')
   <section id="work_hero" class="hero work-hero">
 

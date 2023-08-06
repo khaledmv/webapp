@@ -58,7 +58,7 @@ class BlogController extends Controller
 
     public function blogHomePage(){
 
-        SEOMeta::setTitle('Web design agency');
+        SEOMeta::setTitle('Web design & digital agency');
         SEOMeta::setDescription('Need to hire a Shopify Expert? We are official Shopify partners &amp; experts offer Shopify design &amp; development. Get a quote from our Shopify agency today!');
         SEOMeta::setCanonical('https://webaiid.com/blog/');
 
@@ -67,10 +67,10 @@ class BlogController extends Controller
         OpenGraph::setUrl('https://webaiid.com/blog/');
         OpenGraph::addProperty('type', 'articles');
 
-        TwitterCard::setTitle('Blogs - Webaiid');
+        TwitterCard::setTitle('Web design & digital agency');
         TwitterCard::setSite('@webaiid');
 
-        JsonLd::setTitle('Blogs - Webaiid');
+        JsonLd::setTitle('Web design & digital agency | webaiid');
         JsonLd::setDescription('Need to hire a Shopify Expert? We are official Shopify partners &amp; experts offer Shopify design &amp; development. Get a quote from our Shopify agency today!');
         JsonLd::addImage('https://webaiid.com/assets/img/webaiidlogo.png');
 

@@ -1,5 +1,11 @@
 @extends('frontend.app')
 
+
+@section('canonical')
+<link rel="canonical" href="https://webaiid.com/" />
+@endsection
+
+
 @section('hero-content')
   @include('frontend.partial.hero')
 @endsection
@@ -53,21 +59,21 @@
             <div class="service-box ">
               <ion-icon class="bx" name="albums-outline"></ion-icon>
               
-              <h1 class="services__title">Web Design </h1>
+              <h4 class="services__title">Web Design </h4>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-box ">
               <ion-icon class="bx" name="grid-outline"></ion-icon>
-              <h1 class="services__title">Web Development</h1>
+              <h4 class="services__title">Web Development</h4>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box ">
               <ion-icon class="bx" name="analytics-outline"></ion-icon>
-              <h1 class="services__title">SEO & Content Marketing</h1>
+              <h4 class="services__title">SEO & Content Marketing</h4>
             </div>
           </div>
 

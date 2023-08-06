@@ -1,5 +1,8 @@
 @extends('frontend.app')
 
+@section('canonical')
+<link rel="canonical" href="https://webaiid.com/contact/" />
+@endsection
 
 @section('hero-content')
 <section id="hero" class="hero d-flex align-items-center">
@@ -7,7 +10,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h1 data-aos="fade-up">We are more than happy to assist you to grow business</h1>
+        <h1 data-aos="fade-up">Let's work together to accelerate your digital strategy!</h1>
         <h2 class="header__iconBox" data-aos="fade-up" data-aos-delay="400">
           <span class="header-icon"><ion-icon class="header-icon-orange" name="stats-chart-outline"></ion-icon> Increase Store Performance</span>
           <span class="header-icon"><ion-icon class="header-icon-orangered" name="speedometer-outline"></ion-icon> Fast Delivery</span>
@@ -36,7 +39,7 @@
 
         <header class="section-header">
           <h2>Contact</h2>
-          <p>Contact Us</p>
+          <p>How Can We Help?</p>
         </header>
 
         <div class="row gy-4">
@@ -69,7 +72,7 @@
                 <div class="info-box">
                   <i class="bi bi-clock"></i>
                   <h3>Open Hours</h3>
-                  <p>Monday - Saturday<br>EST 8:00AM - 6:00PM</p>
+                  <p>Monday - Saturday<br>EST 8:00AM - 10:00PM</p>
                 </div>
               </div>
             </div>

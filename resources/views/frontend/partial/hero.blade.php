@@ -12,7 +12,7 @@
         <div data-aos="fade-up" data-aos-delay="400">
           <div class="text-center text-lg-start">
             <a href="https://calendly.com/shopify-khaled/30min" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Book An Appointment</span>
+              <span>Free 30m. Consultation</span>
               <i class="bi bi-arrow-right"></i>
             </a>
           </div>
