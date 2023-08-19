@@ -26,6 +26,15 @@
               We started developing with Shopify in the very early days and have since helped hundreds of brands succeed on the platform
               Our mission is to help eCommerce businesses grow through innovation, consistency and quality of delivered Shopify solutions and services.
             </p>
+
+            <div class="cta-btn" data-aos="fade-up" data-aos-delay="400">
+              <div class="text-center text-lg-start">
+                <a href="{{ route('contact-page')}}" class="ctn-btn-link">
+                  <span>Get In Touch</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -59,21 +68,32 @@
             <div class="service-box ">
               <ion-icon class="bx" name="albums-outline"></ion-icon>
               
-              <h4 class="services__title">Web Design </h4>
+              <h4 class="services__title">Digital Design & Services </h4>
+              <h5>
+                Web design,
+                Custom web app development,
+                User experience (UX),           
+                Personalization and customization</h5>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-box ">
               <ion-icon class="bx" name="grid-outline"></ion-icon>
-              <h4 class="services__title">Web Development</h4>
+              <h4 class="services__title">Marketing</h4>
+              <h5>Media strategy, eRetail / Amazon, Paid social, Audience planning, Content marketing, Media analytics</h5>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box ">
               <ion-icon class="bx" name="analytics-outline"></ion-icon>
-              <h4 class="services__title">SEO & Content Marketing</h4>
+              <h4 class="services__title">SEO</h4>
+              <h5>
+                Search Engine Optimization (SEO),
+                Paid search,
+                Audience planning,
+              </h5>
             </div>
           </div>
 
@@ -83,61 +103,35 @@
 
     </section><!-- End Services Section -->
 
-    
-
-  <!-- ======= Features Section ======= -->
-  <section id="why" class="features">
-
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header">
-        <h2>Why we are ???</h2>
-        <p>Because we get the job done. To the highest standards</p>
-      </header>
-
-      <div class="row">
-
-        <div class="col-lg-6">
-          <img src="assets/img/features.png" class="img-fluid" alt="webaiid about us" loading="lazy">
-        </div>
-
-        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-          <div class="row align-self-center gy-4">
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Complete and Total Transparency</h3>
-              </div>
+<!-- ======= choose-us Section ======= -->
+    <section class="choose-us" data-aos="fade-up" id="choose-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="choose-us__image">
+              <img src="{{asset('assets/img/choose-us/circle.png')}}" alt="why-choose-us" loading="lazy">
             </div>
+          </div>
+          <div class="col-sm-12 col-md-6 choose-us__content-div">
+            <div class="choose-us__content">
+              <h2 class="choose-us__content-title geo">Why <span style="color: #FF498A;">choose</span> a digital marketing agency like <span style="color: #BFDD76;">Webaiid?</span></h2>
+              <p>We win business because everything we do is about winning more business for the companies we serve. And we can prove our value. Every client sees our mission in action... We exist to help companies thrive, driving transformational growth through innovative digital marketing. </p>
 
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Intentionality and Integrity</h3>
-              </div>
+              <a href="{{ route('contact-page')}}">
+                Get In Touch 
+                <i class="bi bi-arrow-right"></i></a>
             </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Supporting Team</h3>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>A Genuine Focus on Your ROI</h3>
-              </div>
-            </div>
-
-
           </div>
         </div>
+      </div>
+    </section>
+  
+  <!-- ======= End choose-us Section ======= -->
 
-      </div> <!-- / row -->
+  <!-- ======= Features Section ======= -->
+  <section id="why" data-aos="fade-up" class="features">
 
+    <div class="container" >
 
       <header class="section-header design-portfolio">
         <h2>Portfolio </h2>
@@ -158,7 +152,7 @@
             <div  data-aos="zoom-out" data-aos-delay="200">
               <div class="feature-box portfolio-feature-box">
                 <h4 class="feature-box__title"> {{ $portfolio->title }}</h4>
-                <p>{{ $portfolio->para }}</p>
+                <p class="feature-box__para">{{ $portfolio->para }}</p>
                 <a class="feature-box__btn" href="{{ route('work-page')}}">{{$portfolio->buttonText}}<i class="bi bi-arrow-right"></i> </a>
               </div>
             </div>

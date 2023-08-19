@@ -19,8 +19,8 @@
         </div>
       </div>
       <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="100">
-        <img src="assets/img/cms.svg" class="img-fluid hero__svg" alt="webaid digital agency" loading="lazy" >
-        
+        <img src="assets/img/web-ui-2.svg" class="img-fluid" alt="webaiid" loading="lazy" >
+       
       </div>
     </div>
   </div>

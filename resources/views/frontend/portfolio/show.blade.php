@@ -100,7 +100,7 @@
             <div class="row">
               <div class="col-md-12">
                 <h3 class="work-font_title">Expressive, Bold Fonts</h3>
-                <p class="work-font-para">The font "Lobster"  effectively communicates who Indiana Sugars is: a friendly, family-based corporation providing sweeteners nationwide. Pairing Lobster with PT Sans and Fredoka gives the site a modern, corporate feel while Lobster emphasizes the company's approachability and personality.</p>
+                <p class="work-font-para">UI font is an important element of user interface design. It should be clear, legible, and consistent with the overall design of the app or website. Our Webaiid Design team apply best font of Industries standard.</p>
 
                 <div class="work-font-images">
                   @if ($work->font_img)
